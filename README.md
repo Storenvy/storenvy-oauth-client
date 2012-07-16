@@ -1,11 +1,11 @@
 storenvy-oauth-client
 =====================
 
-A demo application for connecting to the Storenvy OAuth API
+A demo application for connecting to the Storenvy OAuth API.
 
 #Getting Started
 
-1. Register an application [http://www.storenvy.dev/oauth/applications](http://www.storenvy.dev/oauth/applications)
+1. Register an application [http://www.storenvy.dev/oauth/applications](http://www.storenvy.dev/oauth/applications).
 
         # Callback URL
         http://storenvy-oauth-client.dev/auth/todo/callback
