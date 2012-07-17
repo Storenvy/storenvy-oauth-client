@@ -25,11 +25,13 @@ A demo application for connecting to the Storenvy OAuth API.
         
         # example
         http://storenvy-oauth-client.dev/auth/todo/callback?code=123456789012345678901234567890
+        
 7. Generate an access token with the code from the url
         
         client   = OAuth2::Client.new(app_id, secret, site: "http://api.storenvy.dev")
         callback = "http://storenvy-oauth-client.dev/auth/todo/callback"
         access   = client.auth_code.get_token("#{your_code}", redirect_uri: callback)
+        
 8. Test that the token works.
         
-        puts access.get("ping")
+        puts access.get("ping").parsed
