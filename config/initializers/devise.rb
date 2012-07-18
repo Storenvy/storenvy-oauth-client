@@ -196,7 +196,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :storenvy, STORENVY_OAUTH[:app_id], STORENVY_OAUTH[:secret]#, :scope => 'user,public_repo'
+  config.omniauth :storenvy, STORENVY_OAUTH[:app_id], STORENVY_OAUTH[:secret], :scope => 'user store_read store_write'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

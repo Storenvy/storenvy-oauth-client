@@ -7,9 +7,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     sign_in_and_redirect @user
   end
-  
-  def failure
-    Rails.logger.debug("Failure reason: #{request.env['omniauth.error'].response.inspect}")
-    super
-  end
 end
