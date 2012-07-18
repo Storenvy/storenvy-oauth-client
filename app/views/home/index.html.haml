@@ -1,0 +1,22 @@
+%section
+  .row
+    .span16
+      - unless signed_in?
+        %h3 Sign in first to explore the Storenvy API
+        %p= link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), :class => "btn primary"
+      - else
+        %h2 Explore the api
+        .well
+          = link_to "My User", explore_api_path(:me, :format => :json), :class => "btn", "data-explore" => []
+          / = link_to "Profiles", explore_api_path(:profiles, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Store", explore_api_path(:store, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Products", explore_api_path(:products, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Collections", explore_api_path(:collections, :format => :json), :class => "btn", "data-explore" => []          
+          = link_to "Orders", explore_api_path(:orders, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Shipping Groups", explore_api_path(:shipping_groups, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Shipping Classes", explore_api_path(:shipping_classes, :format => :json), :class => "btn", "data-explore" => []
+          = link_to "Webhooks", explore_api_path(:webhooks, :format => :json), :class => "btn", "data-explore" => []          
+
+        %p
+          %pre#display-json
+            Select one of the api methods above

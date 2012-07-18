@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  storenvy_uid: 1
+  storenvy_access_token: 1
+
+two:
+  storenvy_uid: 1
+  storenvy_access_token: 1

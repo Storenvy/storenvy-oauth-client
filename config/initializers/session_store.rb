@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-OauthClient::Application.config.session_store :cookie_store, key: '_oauth-client_session'
+StorenvyOauthClient::Application.config.session_store :cookie_store, key: '_oauth-client_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

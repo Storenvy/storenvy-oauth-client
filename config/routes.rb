@@ -1,6 +1,12 @@
-OauthClient::Application.routes.draw do
+StorenvyOauthClient::Application.routes.draw do
   
-  get "/auth/todo/callback" => "pages#callback"
+  devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"} do
+    get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
+  end
+
+  match 'explore/:api' => 'api#explore', :as => :explore_api
+  root :to => 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

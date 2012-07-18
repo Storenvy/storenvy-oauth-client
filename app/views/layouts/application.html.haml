@@ -1,0 +1,26 @@
+!!! 5
+%html
+  %head
+    %title Storenvy Oauth Client (Devise + Omniauth)
+    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+    = stylesheet_link_tag    "application"
+    = csrf_meta_tags
+    = javascript_include_tag :all
+    
+    :css
+      .main {margin-top:60px;}
+      .topbar {color:#fff;}
+      
+  %body
+    .topbar
+      .fill
+        .container
+          = link_to "Storenvy Oauth Client (Devise + Omniauith)", root_path, :class => "brand"
+          - if signed_in?
+            = link_to("Sign out", destroy_user_session_path, :class => "btn primary", :method => :delete)
+            = current_user.email
+
+    .container.main
+      = yield
+    = javascript_include_tag "application"
+    = javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-buttons.min.js"

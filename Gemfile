@@ -5,9 +5,11 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'oauth2'
 gem 'awesome_print'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-oauth2'
+gem 'haml-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,4 +36,13 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+end
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
 end
