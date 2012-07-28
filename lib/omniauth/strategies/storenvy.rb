@@ -4,6 +4,13 @@ module OmniAuth
       option :name, :storenvy
       option :client_options, { site: "http://api.storenvy.dev", authorize_url: "http://www.storenvy.dev/oauth/authorize" }
 
+      option :client_options, {
+        :site               => "http://api.storenvy.dev",
+        # :request_token_path => "/oauth/request_token",
+        :authorize_url     => "http://www.storenvy.dev/oauth/authorize",
+        # :access_token_path  => "/oauth/access_token",
+      }
+
       uid do
         raw_info["id"]
       end
