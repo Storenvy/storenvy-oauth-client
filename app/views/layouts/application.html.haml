@@ -1,26 +1,49 @@
 !!! 5
-%html
+%html{lang: "en"}
   %head
-    %title Storenvy Oauth Client (Devise + Omniauth)
-    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
-    = stylesheet_link_tag    "application"
-    = csrf_meta_tags
-    = javascript_include_tag :all
+    %meta{charset: "utf-8"}
+    %title Storenvy Oauth Client Starter
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %meta{name: "description", content:"Your app's description."}
+    %meta{name: "author", content:"Your name."}
+ 
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    / [if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    
+    / Le styles
+    = stylesheet_link_tag "/css/bootstrap.css"
     
     :css
-      .main {margin-top:60px;}
-      .topbar {color:#fff;}
-      
+      body {
+           padding-top: 60px; 
+           /* 60px to make the container go all the way to the bottom of the topbar */
+         }
+    = stylesheet_link_tag "/css/bootstrap-responsive.css"
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+    = javascript_include_tag :application  
   %body
-    .topbar
-      .fill
+    .navbar.navbar-fixed-top
+      .navbar-inner
         .container
-          = link_to "Storenvy Oauth Client (Devise + Omniauith)", root_path, :class => "brand"
-          - if signed_in?
-            = link_to("Sign out", destroy_user_session_path, :class => "btn primary", :method => :delete)
-            = current_user.email
+          = link_to "Storenvy Oauth Client", root_path, class: "brand"
+          .nav-collapse
+            %ul.nav
+              %li.active= link_to "Home", root_path
+          .btn-group.pull-right
+            - if user_signed_in?
+              = link_to "#", class: "btn dropdown-toggle", data: {toggle: "dropdown"} do
+                %i.icon-user
+                = current_user.login
+                %span.caret
+              %ul.dropdown-menu              
+                %li= link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+              = link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), class: "btn btn-primary"
 
-    .container.main
+    .container
       = yield
-    = javascript_include_tag "application"
-    = javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-buttons.min.js"
+
+    %script{src: "/js/jquery-1.7.2.min.js"}
+    %script{src: "/js/bootstrap.js"}

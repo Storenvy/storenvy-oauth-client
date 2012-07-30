@@ -1,15 +1,21 @@
-storenvy-oauth-client
+Storenvy Oauth Client
 =====================
 
-A demo application for connecting to the Storenvy OAuth API.
+A starter application for building on the Storenvy OAuth API.
 
 #Getting Started
 
-1. Register an application [http://api.storenvy.dev/oauth/applications](http://api.storenvy.dev/oauth/applications).
+1. Clone the project folder onto your computer.
 
-        # Callback URL
-        http://storenvy-oauth-client.dev/users/auth/storenvy/callback
-        
-2. Replace your new credentials into constants.rb.
+2. Register a new application at [http://developers.storenvy.com/oauth/applications](http://developers.storenvy.com/oauth/applications).
 
-3. Run in the console: `bundle install; rake db:reset`
+        # Callback URL (change the domain, if you're using something else)
+        http://storenvy-oauth-client.com/users/auth/storenvy/callback
+
+3. Place your new credentials into `config/storenvy.yml`.
+
+4. Run in the console: `bundle install; rake db:reset`
+
+5. Set [pow](http://pow.cx/) to point `storenvy-oauth-client.dev` to the app's project folder.
+
+6. Build something awesome!
