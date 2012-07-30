@@ -30,7 +30,7 @@
           = link_to "Storenvy Oauth Rails Client", root_path, class: "brand"
           .nav-collapse
             %ul.nav
-              %li.active= link_to "Home", root_path
+              %li{class: ("active" if params[:action] == 'index' &&  params[:controller] == 'home')}= link_to "Home", root_path
           .btn-group.pull-right
             - if user_signed_in?
               = link_to "#", class: "btn dropdown-toggle", data: {toggle: "dropdown"} do
