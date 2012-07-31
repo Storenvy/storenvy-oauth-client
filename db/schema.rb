@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717173414) do
+ActiveRecord::Schema.define(:version => 20120730044735) do
 
   create_table "users", :force => true do |t|
     t.integer  "storenvy_uid"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20120717173414) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "login"
+    t.string   "bio"
+    t.string   "location"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "gender"
+    t.date     "birthday"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

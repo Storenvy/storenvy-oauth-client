@@ -4,7 +4,7 @@ StorenvyOauthClient::Application.routes.draw do
     get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
   end
 
-  match 'explore/:api' => 'api#explore', :as => :explore_api
+  match 'explore/*api' => 'api#explore', :as => :explore_api
   root :to => 'home#index'
 
   # The priority is based upon order of creation:
