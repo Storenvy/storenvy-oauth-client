@@ -1,8 +1,6 @@
 development: &default
-  app_id: b5ae663a8645b9fd5bb17f5ab72e10e4f8e10e39c2049fce12f63ad837082744
-  secret: 995b42478f5c7784956a23778042d2b477abd218add0414bb4fa4f9ba98f9c44
+  app_id: 5c92a49b2196422bac614cc7a9bedaeb0143f4b78381eb1822e3ad67c1bc6c39
+  secret: 1cbab8a5f2e13b1a2e85d0c422893b071f6367d9b8f201917480da52800c7f0c
   callback: http://storenvy-oauth-client.dev/users/auth/storenvy/callback
-  site: http://api.storenvy.dev
-  authorize_url: http://www.storenvy.dev/oauth/authorize
 
 production: *default

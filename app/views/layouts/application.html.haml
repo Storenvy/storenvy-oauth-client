@@ -45,5 +45,8 @@
     .container
       = yield
 
-    %script{src: "/js/jquery-1.7.2.min.js"}
     %script{src: "/js/bootstrap.js"}
+
+    / For syntax highlighting. Remove if you build something else.
+    =stylesheet_link_tag "/css/sunburst.css"
+    %script{src: "/js/prettify.js"}

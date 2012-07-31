@@ -3,19 +3,38 @@
     .span12
       - unless signed_in?
         %h3 Sign in first to explore the Storenvy API
-        %p= link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), :class => "btn primary"
+        %p= link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), class:  "btn primary"
       - else
-        %h2 Explore the api
+        %h2 Explore the Storenvy API
         .well
-          = link_to "My User", explore_api_path(:me, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Store", explore_api_path(:store, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Products", explore_api_path(:products, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Collections", explore_api_path(:collections, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Orders", explore_api_path(:orders, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Shipping Groups", explore_api_path(:shipping_groups, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Shipping Classes", explore_api_path(:shipping_classes, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-          = link_to "Webhooks", explore_api_path(:webhooks, :format => :json), :class => "btn", "data-explore" => [], :target => :blank
-
-        %p
-          %pre#display-json
-            Select one of the api methods above.
+          = link_to "My User", explore_api_path(:me, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Store", explore_api_path(:store, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Products", explore_api_path(:products, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Collections", explore_api_path(:collections, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Orders", explore_api_path(:orders, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Shipping Groups", explore_api_path(:shipping_groups, format: :json), class:  "btn explore-api","data-type" => 'text', remote: true
+          = link_to "Shipping Classes", explore_api_path(:shipping_classes, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = link_to "Webhooks", explore_api_path(:webhooks, format: :json), class:  "btn explore-api", "data-type" => 'text', remote: true
+          = form_tag "#", id: "api-explorer", style: "margin-top:20px" do
+            %label{for: "explore-url",style: "font-weight:bold"}
+              Endpoint
+            %span{style: "white-space:no-wrap"}
+              http://api.storenvy.com/v1/
+              = text_field :url, nil, id: "explore-url"
+              \.json
+            = submit_tag "Send request"
+        #api-response
+        #spinner-wrapper
+          .spinner
+            .bar1
+            .bar2
+            .bar3
+            .bar4
+            .bar5
+            .bar6
+            .bar7
+            .bar8
+            .bar9
+            .bar10
+            .bar11
+            .bar12
