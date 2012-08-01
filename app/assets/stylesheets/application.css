@@ -9,9 +9,10 @@
 .btn-storenvy,
 a.btn-storenvy,
 a:active.btn-storenvy {
+position: absolute;
   width:152px;
-  height:20px;
-  padding: 7px 12px;
+  height:18px;
+  padding: 7px 12px 7px 25px;
   text-indent: 18px;
   border-radius:4px;
   color:white;
@@ -45,9 +46,14 @@ a:active.btn-storenvy {
   background-image:-o-linear-gradient(-90deg,rgb(77,115,149) 0%,rgb(103,157,191) 100%);
 }
 .btn-storenvy i {
-  background: url(../img/storenvy-btn-icon.png) no-repeat;
-  display: inline-block;
-  background-position: 0px 1px;
+  background: url(../img/storenvy-btn-icon.png) no-repeat 10px 50%;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 1px solid rgb(55,93,113);
+  box-shadow: 1px 0px 0px rgba(255,255,255,.3);
 }
 .btn-storenvy.on-dark,
 a:hover.btn-storenvy.on-dark,
