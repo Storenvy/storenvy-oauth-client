@@ -40,7 +40,9 @@
               %ul.dropdown-menu              
                 %li= link_to "Sign out", destroy_user_session_path, method: :delete
             - else
-              = link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), class: "btn btn-primary"
+              %a.btn-storenvy.on-dark{ href: user_omniauth_authorize_path(:storenvy) }
+                %i
+                  Sign in with Storenvy
 
     .container
       = yield

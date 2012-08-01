@@ -5,3 +5,52 @@
  *= require_self
  *= require_tree . 
 */
+
+.btn-storenvy,
+a.btn-storenvy,
+a:active.btn-storenvy {
+  width:152px;
+  height:20px;
+  padding: 7px 12px;
+  text-indent: 18px;
+  border-radius:4px;
+  color:white;
+  font-family:"Lucida Grande";
+  font-style:normal;
+  font-size:12px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.35);
+  color:rgb(255,255,255);
+  text-shadow:0px 1px 0px rgba(0,0,0,0.35);
+  border: 1px solid rgb(52,88,107);
+  background-image:-moz-linear-gradient(50% 0% -90deg,rgb(103,157,191) 0%,rgb(92,124,145) 100%); 
+  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(103,157,191)),color-stop(1, rgb(92,124,145)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(103,157,191) 0%,rgb(92,124,145) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(103,157,191) 0%,rgb(92,124,145) 100%);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.2);
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.2);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.2);
+}
+a:hover.btn-storenvy {
+  color:white;
+  text-decoration:none;
+  background-image:-moz-linear-gradient(50% 0% -90deg,rgb(79,133,173) 0%,rgb(70,95,119) 100%); 
+  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(79,133,173)),color-stop(1, rgb(70,95,119)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(79,133,173) 0%,rgb(70,95,119) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(79,133,173) 0%,rgb(70,95,119) 100%);
+}
+a:active.btn-storenvy {
+  background-image:-moz-linear-gradient(50% 0% -90deg,rgb(77,115,149) 0%,rgb(103,157,191) 100%); 
+  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(77,115,149)),color-stop(1, rgb(103,157,191)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(77,115,149) 0%,rgb(103,157,191) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(77,115,149) 0%,rgb(103,157,191) 100%);
+}
+.btn-storenvy i {
+  background: url(../img/storenvy-btn-icon.png) no-repeat;
+  display: inline-block;
+  background-position: 0px 1px;
+}
+.btn-storenvy.on-dark,
+a:hover.btn-storenvy.on-dark,
+a:active.btn-storenvy.on-dark {
+    border: 1px solid rgb(0,0,0);
+}

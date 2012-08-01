@@ -3,7 +3,11 @@
     .span12
       - unless signed_in?
         %h3 Sign in first to explore the Storenvy API
-        %p= link_to "Sign in with Storenvy", user_omniauth_authorize_path(:storenvy), class:  "btn primary"
+        %br/
+        %p
+          %a.btn-storenvy{ href: user_omniauth_authorize_path(:storenvy) }
+            %i
+              Sign in with Storenvy
       - else
         %h2 Explore the Storenvy API
         .well

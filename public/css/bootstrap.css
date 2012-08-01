@@ -3808,6 +3808,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-group {
   padding: 5px 5px 6px;
   margin: 0;
+  margin-top:7px;
 }
 
 .navbar .nav > li > a:hover {
