@@ -40,6 +40,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'quiet_assets'
 end
 
 group :production do
