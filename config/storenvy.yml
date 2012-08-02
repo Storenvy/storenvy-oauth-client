@@ -1,6 +1,6 @@
 development: &default
-  app_id: ac8cb3946656c0dcf0378e286dd0c743678d0f7e6ec3e7ec22d62ddec4c40dc8
-  secret: 243c9a428564f037bcdbf1c6fe29573b9863a87ed3243977c1f2c8e5ed145607
-  callback: http://consumer.dev/users/auth/storenvy/callback
+  app_id: 00ba6cdd02cefd1e8407e01aa422ac5ff5a39ea016e8c55ccb4a14161f1cc572
+  secret: 44ce5ebb290254b32bcb219be4c071a497e2c191aec6c1bdf2760cd6980efabb
+  callback: http://storenvy-oauth-client.dev/users/auth/storenvy/callback
 
 production: *default

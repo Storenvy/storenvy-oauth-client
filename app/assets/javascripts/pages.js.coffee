@@ -27,7 +27,7 @@ $(->
       <h3>Status: " + status + "</h3>
       <pre class='prettyprint lang-js'>" + JSON.stringify(jQuery.parseJSON(data), undefined, 4) + "</pre>")
   
-    prettyPrint()
+    
   
     $("#api-response").show()
     $("#spinner-wrapper").hide()
