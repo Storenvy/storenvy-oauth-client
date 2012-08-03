@@ -9,6 +9,7 @@ gem 'awesome_print'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-oauth2'
+gem 'omniauth-storenvy'
 gem 'haml-rails'
 
 # Gems used only for assets and not required
