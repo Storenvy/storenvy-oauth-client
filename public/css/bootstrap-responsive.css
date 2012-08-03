@@ -70,6 +70,7 @@
   .visible-desktop {
     display: none !important;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -84,6 +85,9 @@
   }
   .visible-desktop {
     display: none !important ;
+  }
+  .navbar .btn-group {
+      margin-top:-41px;
   }
 }
 
@@ -133,6 +137,9 @@
   .carousel-caption {
     position: static;
   }
+  .navbar .btn-group {
+      margin-top:-41px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -153,6 +160,9 @@
     width: auto;
     clear: none;
     text-align: left;
+  }
+    .navbar .btn-group {
+      margin-top:-41px;
   }
   .dl-horizontal dd {
     margin-left: 0;
