@@ -1,10 +1,70 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+body {
+  padding-top: 100px;
+}
+
+.navbar {
+  background: #005BAE;
+  background-image: linear-gradient(bottom, #0453A2 0%, #0B53CA 100%);
+  background-image: -webkit-linear-gradient(bottom, #0453A2 0%,  #0B53CA 100%);
+  height: 70px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2), inset 0px -5px 40px rgba(0,0,0,.2), inset 0px -1px 0px rgba(0,0,0,.4), inset 0px -2px 0px rgba(255,255,255,.2), inset 0px 1px 0px rgba(0,0,0,.4), inset 0px 2px 0px rgba(255,255,255,.2);
+  z-index:1000;
+}
+
+.navbar .navbar-inner {
+  background: none;
+  box-shadow: none;
+}
+
+.navbar .brand {
+  padding: 21px 20px;
+}
+
+.navbar .nav > li > a {
+  padding: 0;
+  margin: 25px 10px;
+  font-size: 16px;
+}
+
+.navbar .nav .active > a {
+  background: none;
+}
+
+.navbar .nav .active > a:hover {
+  background: none;
+  border-bottom:3px solid #F19430;
+}
+
+a.brand, a:link.brand, a:visited.brand {
+  color: #fff;
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.btn-group > a.dropdown-toggle, .btn-group > a:link.dropdown-toggle, .btn-group > a:visited.dropdown-toggle {
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-group > a:hover.dropdown-toggle {
+  text-decoration: none;
+}
+
+.btn-group > a:hover.dropdown-toggle span.link-wrapper {
+  border-bottom:3px solid #F19430;
+}
+
+.btn-primary .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret, .btn-success .caret, .btn-inverse .caret {
+  margin: 9px 0 0 9px;
+}
+
+.navbar .btn-group {
+  margin-top: 12px;
+}
 
 .btn-storenvy,
 a.btn-storenvy,
@@ -12,7 +72,7 @@ a:active.btn-storenvy {
 position: absolute;
   width:152px;
   height:18px;
-  padding: 7px 12px 7px 25px;
+  padding: 7px 0 7px 25px;
   text-indent: 18px;
   border-radius:4px;
   color:white;

@@ -28,14 +28,11 @@
       .navbar-inner
         .container
           = link_to "Storenvy Oauth Rails Client", root_path, class: "brand"
-          .nav-collapse
-            %ul.nav
-              %li{class: ("active" if params[:action] == 'index' &&  params[:controller] == 'home')}= link_to "Home", root_path
           .btn-group.pull-right
             - if user_signed_in?
-              = link_to "#", class: "btn dropdown-toggle", data: {toggle: "dropdown"} do
-                %i.icon-user
-                = current_user.login
+              = link_to "#", class: "btn-primary dropdown-toggle", data: {toggle: "dropdown"} do
+                %span.link-wrapper
+                  = current_user.login
                 %span.caret
               %ul.dropdown-menu              
                 %li= link_to "Sign out", destroy_user_session_path, method: :delete
