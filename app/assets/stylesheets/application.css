@@ -3,9 +3,7 @@ body {
 }
 
 .navbar {
-  background: #005BAE;
-  background-image: linear-gradient(bottom, #0453A2 0%, #0B53CA 100%);
-  background-image: -webkit-linear-gradient(bottom, #0453A2 0%,  #0B53CA 100%);
+  background: hsl(213, 72%, 34%);
   height: 70px;
   box-shadow: 0 5px 10px rgba(0,0,0,.2), inset 0px -5px 40px rgba(0,0,0,.2), inset 0px -1px 0px rgba(0,0,0,.4), inset 0px -2px 0px rgba(255,255,255,.2), inset 0px 1px 0px rgba(0,0,0,.4), inset 0px 2px 0px rgba(255,255,255,.2);
   z-index:1000;
